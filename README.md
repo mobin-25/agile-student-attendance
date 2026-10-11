@@ -30,5 +30,11 @@ A simple web application prototype for demonstrating Agile development and Git/G
 
 \- GitHub Actions (for CI/CD in a later question)
 
+\## Attendance History
 
+
+
+The system will allow students to view their attendance records
+
+by date and subject.
 
