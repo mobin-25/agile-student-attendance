@@ -1,5 +1,3 @@
-
-
 \# Student Attendance Management System (SAMS)
 
 
@@ -37,4 +35,10 @@ A simple web application prototype for demonstrating Agile development and Git/G
 The system will allow students to view their attendance records
 
 by date and subject.
+
+\## Attendance Reports
+
+
+
+The system will support attendance summaries and percentage-based reports.
 
