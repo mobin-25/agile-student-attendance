@@ -1,0 +1,7 @@
+services:
+  sams-web:
+    build: .
+    container_name: sams-container
+    ports:
+      - "8080:80"
+    restart: unless-stopped

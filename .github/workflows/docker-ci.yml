@@ -1,0 +1,29 @@
+name: Docker CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Validate application files
+        run: |
+          test -f index.html
+          test -f Dockerfile
+          test -f compose.yaml
+          grep -qi '<html' index.html
+          echo "Application files validated"
+
+      - name: Validate Docker Compose configuration
+        run: docker compose config -q
+
+      - name: Build Docker image
+        run: docker build -t sams-web:ci .
